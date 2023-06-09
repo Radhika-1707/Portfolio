@@ -4,10 +4,15 @@ import Head from 'next/head'
 import About from '../components/About'
 import Experience from '../components/Experience'
 import Skills from '../components/Skills'
+import Projects from '../components/Projects'
+import Contact from '../components/Contact'
 export default function Home() {
   return (
 
-    <div className='bg-[rgb(36,36,36)] text-white h-screen snap-y z-0 snap-mandatory overflow-scroll'>
+    <div className='bg-[rgb(36,36,36)] text-white h-screen snap-y z-0 
+    overflow-y-scroll snap-mandatory overflow-x-hidden first-letter:
+    scrollbar scrollbar-track-gray-400/40 scrollbar-thumb-[#F7AB0A]/80
+    '>
       <Head>
         <title>Radhika Portfolio</title>
       </Head>
@@ -24,10 +29,14 @@ export default function Home() {
 
       </section>
       <section id='skills' className='snap-start'>
-        <Skills/>
+        <Skills />
       </section>
-      {/* Project */}
-      {/* Contact me */}
+      <section id='projects' className='snap-start'>
+        <Projects />
+      </section>
+      <section id='contact'className='snap-start' >
+        <Contact/>
+      </section>
     </div>
   )
 }
